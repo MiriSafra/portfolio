@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miryam Safra - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Miryam Safra</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#resume" class="nav-link">Resume</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="profile-photo">
+                        <img src="./placeholder.png" alt="Profile Photo" id="profile-img">
+                    </div>
+                    <div class="hero-text">
+                        <h1>Miryam Safra</h1>
+                        <p class="subtitle">Full Stack Developer</p>
+                        <p class="description">Passionate about creating innovative solutions with modern web technologies. Experienced in open-source development and cloud deployments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>I'm a passionate Full Stack Developer with hands-on experience in modern web technologies. Skilled in .NET Core development, SQL Server, and Angular, with practical experience in REST API integration.</p>
+                    
+                    <p>I've contributed to open-source projects at Red Hat, collaborating in cross-functional Agile teams while leveraging Kubernetes and Docker for cloud deployments. I excel in problem-solving, clean code practices, and efficient solution delivery.</p>
+                    
+                    <div class="skills">
+                        <h3>Skills & Technologies</h3>
+                        <div class="skills-grid">
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">.NET Core</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">GoLang</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Linux(Fedora)</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">SQL Server</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Entity Framework</span>
+                            <span class="skill-tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume">
+            <div class="container">
+                <h2>Resume</h2>
+                <div class="resume-content">
+                    <p>Download my complete resume to learn more about my experience and qualifications.</p>
+                    
+                    <div class="resume-actions">
+                        <a href="./Miryam Safra CV.pdf" class="btn btn-primary" download>Download Resume (PDF)</a>
+                        <a href="#" class="btn btn-secondary" onclick="toggleResumePreview()">View Online</a>
+                    </div>
+
+                    <div id="resume-preview" class="resume-preview" style="display: none;">
+                        <div class="resume-section">
+                            <h3>Experience</h3>
+                            <div class="job">
+                                <h4>Full Stack Developer - Red Hat</h4>
+                                <p class="job-date">2024 - Present</p>
+                                <ul>
+                                    <li>Developing and contributing to open-source projects with focus on Agile methodologies</li>
+                                    <li>Working with React, Go, Kubernetes, and Docker for large-scale cloud migrations</li>
+                                    <li>Collaborating in cross-functional teams, refining features, and performing code reviews</li>
+                                    <li>Extending automation coverage using Cypress testing framework</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="resume-section">
+                            <h3>Education</h3>
+                            <div class="education">
+                                <h4>Software Engineering Technician Diploma</h4>
+                                <p class="education-date">2022-2024</p>
+                                <p>Extended studies in AI with extensive experience using AI tools. Participated in advanced courses by Ultra Code, sponsored by Kama-Tech, covering Algorithms, Operating Systems, Data Structures, Mathematics, and Graph Theory.</p>
+                            </div>
+                        </div>
+
+                        <div class="resume-section">
+                            <h3>Languages</h3>
+                            <div class="languages">
+                                <p><strong>Hebrew:</strong> Native</p>
+                                <p><strong>English:</strong> Excellent Proficiency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Business Management Application</h3>
+                        <p>Full-stack React application for business management with appointment scheduling, services management, and business details. Features a modern UI built with MUI and robust backend API handling.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">MobX</span>
+                            <span class="tech-tag">MUI</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MiriSafra/Subscribers-API" class="btn btn-outline" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Employee Management System</h3>
+                        <p>Full-stack web application for comprehensive employee management with role-based permissions, Excel exports, and responsive design. Built with ASP.NET Core backend and Angular frontend.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ASP.NET Core</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Entity Framework</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MiriSafra/EmployeeManagement" class="btn btn-outline" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>CLI Development Tool (.NET)</h3>
+                        <p>Advanced command-line interface application built in C# with sophisticated packaging and code file management capabilities. Developed under professional mentorship with focus on clean architecture.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">CLI</span>
+                            <span class="tech-tag">File Management</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/MiriSafra/Code-Bundle" class="btn btn-outline" target="_blank">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Miryam Safra. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/MiriSafra" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/miri-safra/" target="_blank">LinkedIn</a>
+                <a href="mailto:mirisaf827@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Toggle resume preview
+        function toggleResumePreview() {
+            const preview = document.getElementById('resume-preview');
+            if (preview.style.display === 'none') {
+                preview.style.display = 'block';
+            } else {
+                preview.style.display = 'none';
+            }
+        }
+
+        // Add active class to navigation based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
