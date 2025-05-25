@@ -281,17 +281,21 @@ section h2::after {
   background-color: #ffffff;
 }
 
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
+
 .project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: white;
-  padding: 2rem;
+  padding: 0.5rem;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -303,7 +307,7 @@ section h2::after {
 }
 
 .project-card h3 {
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #2c3e50;
   margin-bottom: 1rem;
 }
@@ -330,10 +334,18 @@ section h2::after {
   font-weight: 500;
 }
 
-.project-links {
+/* .project-links {
   display: flex;
   gap: 1rem;
+} */
+.project-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto; /* כדי להצמיד את האיזור הזה לתחתית הכרטיס */
 }
+
 
 /* Buttons */
 .btn {
@@ -394,20 +406,27 @@ footer .container {
   align-items: center;
 }
 
-.social-links {
+.floating-social {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
 }
 
-.social-links a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.floating-social a i {
+  font-size: 1.4rem;
+  color: #555;
+  transition: color 0.3s;
 }
 
-.social-links a:hover {
-  color: #3498db;
+.floating-social a:hover i {
+  color: #000;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
