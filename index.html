@@ -1,261 +1,543 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miryam Safra - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    <h1>Miryam Safra</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#resume" class="nav-link">Resume</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="profile-photo">
-                        <img src="./placeholder.png" alt="Profile Photo" id="profile-img">
-                    </div>
-                    <div class="hero-text">
-                        <h1>Miryam Safra</h1>
-                        <p class="subtitle">Full Stack Developer</p>
-                        <p class="description">Passionate about creating innovative solutions with modern web technologies. Experienced in open-source development and cloud deployments.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+html {
+  scroll-behavior: smooth;
+}
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <p>
-                      I’m a practical and results-driven Full Stack Developer with hands-on experience in modern web technologies.
-                      Skilled in .NET Core, SQL Server, and Angular, with strong experience in building and integrating RESTful APIs into scalable and maintainable web applications.
-                    </p>
-                    <p>
-                      At Red Hat, I contributed to open-source projects as part of Agile, cross-functional teams, collaborating closely with Docker and Kubernetes for cloud-native deployments.
-                      I value clean code, efficient architecture, and thoughtful problem-solving that drives sustainable, real-world solutions.
-                    </p>
-                    
-                    <div class="skills">
-                        <h3>Skills & Technologies</h3>
-                        <div class="skills-grid">
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">.NET Core</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Angular</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">GoLang</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">Linux(Fedora)</span>
-                            <span class="skill-tag">Windows</span>
-                            <span class="skill-tag">SQL Server</span>
-                            <span class="skill-tag">MySQL</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Kubernetes</span>
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">Entity Framework</span>
-                            <span class="skill-tag">REST API</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+}
 
-        <!-- Resume Section -->
-        <section id="resume" class="resume">
-            <div class="container">
-                <h2>Resume</h2>
-                <div class="resume-content">
-                    <p>Download my complete resume to learn more about my experience and qualifications.</p>
-                    
-                    <div class="resume-actions">
-                  <a href="./Miryam-Safra-CV.pdf" class="btn btn-primary">
-               <i class="fas fa-download"></i> Download Resume (PDF)
-                </a>
-                        <a href="#" class="btn btn-primary" onclick="toggleResumePreview()">View Online</a>
-                    </div>
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-                    <div id="resume-preview" class="resume-preview" style="display: none;">
-                        <div class="resume-section">
-                            <h3>Experience</h3>
-                            <div class="job">
-                                <h4>Full Stack Developer - Red Hat</h4>
-                                <p class="job-date">2024</p>
-                                <ul>
-                                    <li>Developing and contributing to open-source projects with focus on Agile methodologies</li>
-                                    <li>Working with React, Go, Kubernetes, and Docker for large-scale cloud migrations</li>
-                                    <li>Collaborating in cross-functional teams, refining features, and performing code reviews</li>
-                                    <li>Extending automation coverage using Cypress testing framework</li>
-                                </ul>
-                            </div>
-                        </div>
+/* Header and Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e1e1e1;
+  z-index: 1000;
+}
 
-                        <div class="resume-section">
-                            <h3>Education</h3>
-                            <div class="education">
-                                <h4>Software Engineering Technician Diploma</h4>
-                                <p class="education-date">2022-2024</p>
-                                <p>Extended studies in AI with extensive experience using AI tools. Participated in advanced courses by Ultra Code, sponsored by Kama-Tech, covering Algorithms, Operating Systems, Data Structures, Mathematics, and Graph Theory.</p>
-                            </div>
-                        </div>
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
 
-                        <div class="resume-section">
-                            <h3>Languages</h3>
-                            <div class="languages">
-                                <p><strong>Hebrew:</strong> Native <br>
-                                <strong>English:</strong> Excellent Proficiency</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+/* .logo h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+} */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Business Management Application</h3>
-                        <p>Full-stack React application for business management with appointment scheduling, services management, and business details. Features a modern UI built with MUI and robust backend API handling.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">MobX</span>
-                            <span class="tech-tag">MUI</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Express.js</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/MiriSafra/Subscribers-API" class="btn btn-outline" target="_blank">
-                               <i class="fab fa-github" style="margin-inline-end: 8px;"></i>
-                              GitHub
-                            </a>
-                        </div>
-                    </div>
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-                    <div class="project-card">
-                        <h3>Employee Management System</h3>
-                        <p>Full-stack web application for comprehensive employee management with role-based permissions, Excel exports, and responsive design. Built with ASP.NET Core backend and Angular frontend.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ASP.NET Core</span>
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">Entity Framework</span>
-                            <span class="tech-tag">SQL Server</span>
-                            <span class="tech-tag">Bootstrap</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/MiriSafra/EmployeeManagement" class="btn btn-outline" target="_blank">
-                              <i class="fab fa-github" style="margin-inline-end: 8px;"></i>
-                              GitHub
-                            </a>
-                        </div>
-                    </div>
+.logo-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
 
-                    <div class="project-card">
-                        <h3>CLI Development Tool (.NET)</h3>
-                        <p>Advanced command-line interface application built in C# with sophisticated packaging and code file management capabilities. Developed under professional mentorship with focus on clean architecture.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">.NET</span>
-                            <span class="tech-tag">CLI</span>
-                            <span class="tech-tag">File Management</span>
-                        </div>
-                        <div class="project-links">
-                            <!-- <a href="https://github.com/MiriSafra/Code-Bundle" class="btn btn-outline" target="_blank">View on GitHub</a> -->
-                            <a href="https://github.com/MiriSafra/Code-Bundle" class="btn btn-outline" target="_blank">
-                              <i class="fab fa-github" style="margin-inline-end: 8px;"></i>
-                              GitHub
-                            </a>
-                          </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+.logo h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Miryam Safra. All rights reserved.</p>
-            <div class="floating-social">
-              <a href="https://github.com/MiriSafra" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/miri-safra/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="mailto:mirisaf827@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-              <a href="tel:0533175827" aria-label="Phone"><i class="fas fa-phone"></i></a>
-          </div>
-        </div>
-    </footer>
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+.nav-link {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
 
-        // Toggle resume preview
-        function toggleResumePreview() {
-            const preview = document.getElementById('resume-preview');
-            if (preview.style.display === 'none') {
-                preview.style.display = 'block';
-            } else {
-                preview.style.display = 'none';
-            }
-        }
+.nav-link:hover,
+.nav-link.active {
+  color: #2c3e50;
+}
 
-        // Add active class to navigation based on scroll position
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
 
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Main Content */
+main {
+  margin-top: 70px;
+}
+
+/* Hero Section */
+.hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fd 0%, #f1f3f8 100%);
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-direction: column;
+  text-align: center
+}
+
+.profile-photo {
+  flex-shrink: 0;
+}
+
+.profile-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #3498db;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+/* About Section */
+.about {
+  background-color: #ffffff;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.skills {
+  margin-top: 3rem;
+}
+
+.skills h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.skill-tag {
+  background-color: #3498db;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Resume Section */
+.resume {
+  background-color: #f8f9fd;
+}
+
+.resume-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.resume-content p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.resume-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.resume-preview {
+  text-align: left;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+}
+
+.resume-section h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.job, .education {
+  margin-bottom: 1.5rem;
+}
+
+.job h4, .education h4 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.job-date, .education-date {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.job ul {
+  margin-left: 1.5rem;
+}
+
+.job li {
+  margin-bottom: 0.3rem;
+  color: #666;
+}
+
+/* Projects Section */
+.projects {
+  background-color: #ffffff;
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 100%;
+}
+
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* .project-links {
+  display: flex;
+  gap: 1rem;
+} */
+.project-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto; /* כדי להצמיד את האיזור הזה לתחתית הכרטיס */
+}
+
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.btn-outline:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.floating-social {
+  position: fixed;
+  bottom: 35%;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+
+.floating-social a i {
+  font-size: 1.4rem;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.floating-social a:hover i {
+  color: #000;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+      padding: 0 15px;
+  }
+  
+  .nav-menu {
+      gap: 1rem;
+  }
+  
+  .hero-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+      flex-direction: column ;
+  }
+  
+  .hero-text h1 {
+      font-size: 2.2rem;
+  }
+  
+  .profile-photo img {
+      width: 150px;
+      height: 150px;
+  }
+  
+  section {
+      padding: 60px 0;
+  }
+  
+  section h2 {
+      font-size: 2rem;
+  }
+  
+  .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+  }
+  
+  .resume-actions {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  footer .container {
+      flex-direction: column;
+      gap: 1rem;
+  }
+  
+  .container {
+      padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+      gap: 0.5rem;
+  }
+  
+  .nav-link {
+      font-size: 0.9rem;
+  }
+  
+  .hero-text h1 {
+      font-size: 1.8rem;
+  }
+  
+  .subtitle {
+      font-size: 1.1rem;
+  }
+  
+  .project-links {
+      flex-direction: column;
+  }
+  
+  .skills-grid {
+      gap: 0.5rem;
+  }
+  
+  .skill-tag {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+  }
+}
