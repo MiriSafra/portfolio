@@ -44,10 +44,37 @@ header {
   height: 70px;
 }
 
-.logo h1 {
+/* .logo h1 {
   font-size: 1.5rem;
   font-weight: 600;
   color: #2c3e50;
+} */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+.logo h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: 0.5px;
 }
 
 .nav-menu {
@@ -102,6 +129,8 @@ main {
   gap: 3rem;
   max-width: 900px;
   margin: 0 auto;
+  flex-direction: column;
+  text-align: center
 }
 
 .profile-photo {
@@ -408,7 +437,7 @@ footer .container {
 
 .floating-social {
   position: fixed;
-  bottom: 20px;
+  bottom: 35%;
   left: 20px;
   display: flex;
   flex-direction: column;
@@ -442,6 +471,7 @@ footer .container {
       flex-direction: column;
       text-align: center;
       gap: 2rem;
+      flex-direction: column ;
   }
   
   .hero-text h1 {
