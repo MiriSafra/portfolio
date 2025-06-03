@@ -12,7 +12,9 @@
         <nav>
             <div class="nav-container">
                 <div class="logo">
-                    <img src="./MS.png" alt="Miryam Safra" class="logo-img" id="nav-profile-img">                </div>
+                    <a href="#home" >
+                        <img src="./logologo.png" alt="Miryam Safra" class="logo-img" id="nav-profile-img">                </div>
+                    </a>
                 <ul class="nav-menu">
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#resume" class="nav-link">Resume</a></li>
@@ -21,20 +23,22 @@
             </div>
         </nav>
     </header>
-
+    <div class="floating-social">
+        <a href="https://github.com/MiriSafra" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/miri-safra/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:mirisaf827@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:0533175827" aria-label="Phone"><i class="fas fa-phone"></i></a>
+    </div>
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <div class="profile-photo">
-                        <img src="./MS.png" alt="Profile Photo" id="profile-img">
-                    </div>
-                    <div class="hero-text">
+                    <!--<div class="hero-text">
                         <h1>Miryam Safra</h1>
                         <p class="subtitle">Full Stack Developer</p>
                         <p class="description">Passionate about creating innovative solutions with modern web technologies. <br>Experienced in open-source development and cloud deployments.</p>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </section>
@@ -44,12 +48,9 @@
             <div class="container">
                 <h2>About Me</h2>
                 <div class="about-content">
-                    <!-- <p>I'm a passionate Full Stack Developer with hands-on experience in modern web technologies. Skilled in .NET Core development, SQL Server, and Angular, with practical experience in REST API integration.</p> -->
-                    
-                    <!-- <p>I've contributed to open-source projects at Red Hat, collaborating in cross-functional Agile teams while leveraging Kubernetes and Docker for cloud deployments. I excel in problem-solving, clean code practices, and efficient solution delivery.</p> -->
                     <p>
                       I’m a practical and results-driven Full Stack Developer with hands-on experience in modern web technologies.
-                      Skilled in .NET Core, SQL Server, React and Angular, with strong experience in building and integrating RESTful APIs into scalable and maintainable web applications.
+                      Skilled in .NET Core, SQL Server, and Angular, with strong experience in building and integrating RESTful APIs into scalable and maintainable web applications.
                     </p>
                     <p>
                       At Red Hat, I contributed to open-source projects as part of Agile, cross-functional teams, collaborating closely with Docker and Kubernetes for cloud-native deployments.
@@ -94,12 +95,11 @@
                     <p>Download my complete resume to learn more about my experience and qualifications.</p>
                     
                     <div class="resume-actions">
-                        <!-- <a href="./Miryam-Safra-CV.pdf" class="btn btn-primary">Download Resume (PDF)</a> -->
-                        <a href="./Miryam-Safra-CV.pdf" class="btn btn-primary">
+                        <a href="./Miryam-Safra-CV.pdf" class="btn btn-outline">
                           <i class="fas fa-download"></i> Download Resume (PDF)
                         </a>
                         
-                        <a href="#" class="btn btn-primary" onclick="toggleResumePreview()">View Online</a>
+                        <a href="#" class="btn btn-outline" onclick="toggleResumePreview()">View Online</a>
                     </div>
 
                     <div id="resume-preview" class="resume-preview" style="display: none;">
@@ -154,7 +154,7 @@
                             <span class="tech-tag">Express.js</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/MiriSafra/Small-Business-Manager" class="btn btn-outline" target="_blank">
+                            <a href="https://github.com/MiriSafra/Subscribers-API" class="btn btn-outline" target="_blank">
                                <i class="fab fa-github" style="margin-inline-end: 8px;"></i>
                               GitHub
                             </a>
@@ -205,12 +205,6 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Miryam Safra. All rights reserved.</p>
-            <div class="floating-social">
-              <a href="https://github.com/MiriSafra" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/miri-safra/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="mailto:mirisaf827@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-              <a href="tel:0533175827" aria-label="Phone"><i class="fas fa-phone"></i></a>
-          </div>
         </div>
     </footer>
 
